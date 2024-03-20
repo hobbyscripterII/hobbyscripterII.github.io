@@ -1,15 +1,13 @@
 ---
-title: "나만의 github blog 만들기(windows)"
-excerpt: "github blog 생성부터 글 작성까지 해보자!"
-
-date: 2024-03-20
-writer: 이주영
-
-categories: github blog
-tags: [github blog, jekyll, github, git, markdown]
-
+layout: post
 toc: true
 toc_sticky: true
+title: "나만의 github blog 만들기(windows)"
+excerpt: "github blog 생성부터 글 작성까지 해보자!"
+date: 2024-03-20
+writer: 이주영
+categories: github blog
+tags: [github blog, jekyll, github, git, markdown]
 ---
 > 깃허브 블로그는 진입장벽이 높다고 들어서 엄두를 못냈었는데 이번 기회에 만들어보았다. 만드는 과정에서 일어난 여러 트러블 슈팅 또한 기록해두었다.
 
@@ -137,16 +135,16 @@ $ bundle install
 
 공통적으로 맞춰적어야 할 부분을 제외한 나머지 부분들은 개인 정보이므로 알아서 기입하면 된다.
 
-**lang**: ko - 언어 선택(ko - 한국어)
-**timezone**: Asia/Seoul - 시간대 선택(Asia/Seoul - 한국)
+**lang**: ko - 언어 선택(ko - 한국어) <br>
+**timezone**: Asia/Seoul - 시간대 선택(Asia/Seoul - 한국) <br>
 
-**title**: 블로그 타이틀(제목)
-**tagline**: 블로그 서브 타이틀
-**description**: 블로그 설명
-**url**: "https://{github_username}.github.io"
-**github.username**: {github_username}
-**theme_mode**: 블로그 테마 모드(다크 모드/라이트 모드)
-**avatar**: 프로필 사진(나는 github 프로필 url을 입력했다)
+**title**: 블로그 타이틀(제목) <br>
+**tagline**: 블로그 서브 타이틀 <br>
+**description**: 블로그 설명 <br>
+**url**: "https://{github_username}.github.io" <br>
+**github.username**: {github_username} <br>
+**theme_mode**: 블로그 테마 모드(다크 모드/라이트 모드) <br>
+**avatar**: 프로필 사진(나는 github 프로필 url을 입력했다) <br>
 **paginate**: 한 페이지에 나타낼 글 개수(default - 10)
 
 외에 social 부분은 알아서 기입하면 된다.
@@ -159,7 +157,7 @@ $ bundle exec jekyll serve
 
 ![스크린샷 2024-03-20 125726](https://github.com/hobbyscripterII/about-play/assets/135996109/3eee8bc9-8c3a-4d19-8baa-37768c148966)
 
-위와같이 화면에 나타나면 거의 성공이다.
+위와같이 화면에 나타나면 깃허브 블로그 만들기 2/3은 성공이다.
 
 #### ⛔ 블로그 내에서 페이지 전환 시 계속 나타나는 'assert/js/dist/*.min.js Not Found'
 
@@ -227,18 +225,18 @@ categories: [daily]
 
 간단히 테스트용으로 작성한 것이므로 위와 같이 간단하게만 입력해준다.
 
-**title**
+**title** <br>
 title은 쌍따옴표로 묶어도 상관없고 안묶어도 상관은 없다.
 
-**date**
+**date** <br>
 date는 길게 입력할 필요는 없고 저 정도로 간단하게만 입력하면 된다.
 
-**category**
+**category** <br>
 category는 대괄호를 생략하든 안하든 인자 값 받듯이 `categories: github blog` 와 같이 입력하게 되면 좌측의 '카테고리명1'은 메인 카테고리, 우측의 '카테고리명2'는 서브 카테고리로 지정되어 아래와 같이 출력된다.
 
 ![image](https://github.com/hobbyscripterII/about-play/assets/135996109/dfced3e3-5f66-4033-88d1-4e559638e81f)
 
-**tag**
+**tag** <br>
 tag는 배열 형태로 입력받으며 `tags: [github blog, jekyll, github, git, markdown]`와 같이 입력했을 경우 아래와 같이 출력된다.
 
 ![image](https://github.com/hobbyscripterII/about-play/assets/135996109/ddd048e6-2fe5-4c7d-87f0-e8437af61707)
@@ -344,8 +342,8 @@ github action은 처음 사용해봐서 살짝 어리둥절 했었는데 읽어�
 위와 같이 `Add file - Upload files`를 클릭해 누락된 디렉토리를 넣고 push 해주니 무사히 build가 되는 것을 확인할 수 있었다!
 
 ---
-**참고 레퍼런스**
-[github 블로그 만들기](https://devpro.kr/posts/Github-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-(1)/)
-[git action 자동 배포 에러 해결기](https://seobie.github.io/blog/git-action-struggles)
-[github jekyll 테마 적용하다 만난 오류들(Chirpy 테마)](https://velog.io/@lzlko/github-%EB%B8%94%EB%A1%9C%EA%B7%B8)
+**참고 레퍼런스** <br>
+[github 블로그 만들기](https://devpro.kr/posts/Github-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-(1)/) <br>
+[git action 자동 배포 에러 해결기](https://seobie.github.io/blog/git-action-struggles) <br>
+[github jekyll 테마 적용하다 만난 오류들(Chirpy 테마)](https://velog.io/@lzlko/github-%EB%B8%94%EB%A1%9C%EA%B7%B8) <br>
 [github pages 블로그 만들기 - 테마 적용하기(Chirpy)](https://ree31206.tistory.com/entry/github-pages-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-%ED%85%8C%EB%A7%88-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0Chirpy)
