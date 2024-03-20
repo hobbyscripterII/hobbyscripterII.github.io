@@ -113,7 +113,7 @@ Server running... press ctrl-c to stop.
 > 
 > 나는 Chirpy 테마를 적용했으므로 Chirpy 테마 적용을 기준으로 작성한다.(다른 테마는 적용 방식이 조금씩 다른 것 같았다. 다른 테마를 적용하고 싶다면 다른 포스팅을 확인하는 것이 좋을 것이다)
 
-[jekyll theme download](http://jekyllthemes.org) 에서 Chirpy 테마를 다운로드하고 압축을 푼다.
+http://jekyllthemes.org 에서 Chirpy 테마를 다운로드하고 압축을 푼다.
 
 이후 클론받은 디렉토리에 다운로드 받은 파일들을 붙여넣는다. 중복되는 파일들이 몇개 있기에 덮어씌울거냐고 묻는데 덮어씌우면 된다.
 
