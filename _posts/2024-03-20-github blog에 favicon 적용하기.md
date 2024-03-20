@@ -99,3 +99,7 @@ toc: true
 아까 우리가 붙여넣은 파비콘 이미지명만 잘 적어준다면 서버 재가동 시 아래와 같이 이쁘게 적용된 파비콘을 확인할 수 있다.
 
 ![image](https://github.com/hobbyscripterII/csharp/assets/135996109/38ba6129-24da-4d65-a731-6d7d24e1c4d7)
+
+---
+**참고 레퍼런스**
+[블로그 커스터마이징하기](https://wlqmffl0102.github.io/posts/Customizing-Blogs/)
