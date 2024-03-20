@@ -1,13 +1,12 @@
 ---
-layout: post
-toc: true
-toc_sticky: true
 title: "나만의 github blog 만들기(windows)"
 excerpt: "github blog 생성부터 글 작성까지 해보자!"
 date: 2024-03-20
 writer: 이주영
 categories: github blog
 tags: [github blog, jekyll, github, git, markdown]
+toc: true
+# toc_sticky: true
 ---
 > 깃허브 블로그는 진입장벽이 높다고 들어서 엄두를 못냈었는데 이번 기회에 만들어보았다. 만드는 과정에서 일어난 여러 트러블 슈팅 또한 기록해두었다.
 
@@ -50,6 +49,9 @@ jekyll 4.3.3
 
 # 3. repository 생성
 ![스크린샷 2024-03-20 115008](https://github.com/hobbyscripterII/about-play/assets/135996109/dd8c9faa-42c8-4597-871f-6f835c9e43f2)
+
+<br>
+
 나는 이미 해당 레파지토리가 생성되어있기 때문에 해당 에러는 무시하고 보면된다.
 
 레파지토리의 이름은 `{github_username}.github.io`로 지정한다.
@@ -111,7 +113,7 @@ Server running... press ctrl-c to stop.
 > 
 > 나는 Chirpy 테마를 적용했으므로 Chirpy 테마 적용을 기준으로 작성한다.(다른 테마는 적용 방식이 조금씩 다른 것 같았다. 다른 테마를 적용하고 싶다면 다른 포스팅을 확인하는 것이 좋을 것이다)
 
-http://jekyllthemes.org 에서 Chirpy 테마를 다운로드하고 압축을 푼다.
+[http://jekyllthemes.org](http://jekyllthemes.org) 에서 Chirpy 테마를 다운로드하고 압축을 푼다.
 
 이후 클론받은 디렉토리에 다운로드 받은 파일들을 붙여넣는다. 중복되는 파일들이 몇개 있기에 덮어씌울거냐고 묻는데 덮어씌우면 된다.
 
