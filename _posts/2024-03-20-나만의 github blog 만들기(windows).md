@@ -27,7 +27,7 @@ cmd 창에서 `ruby -v` 명령어로 루비 버전을 확인했을 때 아래와
 
 ```shell
 $ ruby -v
-ruby 3.2.3 (2024-01-18 revision 52bb2ac0a6) [x64-mingw-ucrt]
+ruby 3.2.3
 ```
 
 # 2. jekyll 설치
