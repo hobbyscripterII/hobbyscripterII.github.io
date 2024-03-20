@@ -1,7 +1,7 @@
 ---
 title: "나만의 github blog 만들기(windows)"
 excerpt: "github blog 생성부터 글 작성까지 해보자!"
-date: 2024-03-20
+date: 2024-03-20 16:00:00 +09:00
 writer: 이주영
 categories: github blog
 tags: [github blog, jekyll, github, git, markdown]

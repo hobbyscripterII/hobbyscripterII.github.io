@@ -1,7 +1,7 @@
 ---
 title: "github blog에 favicon 적용하기"
 excerpt: "github blog에 파비콘(favicon)을 적용해보자!"
-date: 2024-03-20
+date: 2024-03-20 19:20:00 +09:00
 writer: 이주영
 categories: github blog
 tags: [github blog, jekyll, github, git, favicon]
