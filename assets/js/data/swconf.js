@@ -1,51 +1,40 @@
----
-layout: compress
-permalink: '/:path/swconf.js'
-# Note that this file will be fetched by the ServiceWorker, so it will not be cached.
----
-
 const swconf = {
-  {% if site.pwa.cache.enabled %}
-    cacheName: 'chirpy-{{ "now" | date: "%s" }}',
+  
+    cacheName: 'chirpy-1710897906',resources: [
+      '/assets/css/jekyll-theme-chirpy.css',
+      '/',
+      
+        '/categories/',
+      
+        '/tags/',
+      
+        '/archives/',
+      
+        '/about/',
+      
 
-    {%- comment -%} Resources added to the cache during PWA installation. {%- endcomment -%}
-    resources: [
-      '{{ "/assets/css/:THEME.css" | replace: ':THEME', site.theme | relative_url }}',
-      '{{ "/" | relative_url }}',
-      {% for tab in site.tabs %}
-        '{{- tab.url | relative_url -}}',
-      {% endfor %}
-
-      {% assign cache_list = site.static_files | where: 'swcache', true %}
-      {% for file in cache_list %}
-        '{{ file.path | relative_url }}'{%- unless forloop.last -%},{%- endunless -%}
-      {% endfor %}
-    ],
-
-    {%- comment -%} The request url with below domain will be cached. {%- endcomment -%}
-    allowHosts: [
-      {% if site.img_cdn and site.img_cdn contains '//' %}
-        '{{ site.img_cdn | split: '//' | last | split: '/' | first }}',
-      {% endif %}
-
-      {%- unless site.assets.self_host.enabled -%}
-       {% for cdn in site.data.origin["cors"].cdns %}
-          '{{ cdn.url | split: "//" | last }}'
-          {%- unless forloop.last -%},{%- endunless -%}
-        {% endfor %}
-      {% endunless %}
-    ],
-
-    {%- comment -%} The request url with below path will not be cached. {%- endcomment -%}
-    denyPaths: [
-      {% for path in site.pwa.cache.deny_paths %}
-        {% unless path == empty %}
-          '{{ path | relative_url }}'{%- unless forloop.last -%},{%- endunless -%}
-        {% endunless  %}
-      {% endfor %}
+      
+      
+        '/assets/js/dist/categories.min.js',
+        '/assets/js/dist/commons.min.js',
+        '/assets/js/dist/home.min.js',
+        '/assets/js/dist/misc.min.js',
+        '/assets/js/dist/page.min.js',
+        '/assets/js/dist/post.min.js'
+    ],allowHosts: [
+      
+        'chirpy-img.netlify.app',
+      
+          'fonts.googleapis.com',
+          'fonts.gstatic.com',
+          'fonts.googleapis.com',
+          'cdn.jsdelivr.net',
+          'cdnjs.cloudflare.com'
+      
+    ],denyPaths: [
+      
     ],
     purge: false
-  {% else %}
-    purge: true
-  {% endif %}
+  
 };
+
