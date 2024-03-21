@@ -8,6 +8,8 @@ tags: [github blog, jekyll, github, git, favicon]
 toc: true
 # toc_sticky: true
 ---
+# github blog에 favicon 적용하기
+
 이전에 jekyll을 통해 github blog를 만들었다.
 이후 내 블로그를 구경하고 있던 찰나 상단에 이 아이콘이 거슬리기 시작했다.
 
@@ -23,7 +25,7 @@ toc: true
 
 이제 파비콘을 바꿔보자!
 
-# 1. 파비콘(favicon) 이미지 고르기
+## 1. 파비콘(favicon) 이미지 고르기
 
 [website planet 파비콘 생성기](https://www.websiteplanet.com/ko/webtools/favicon-generator/)를 통해 쉽게 만들 수 있다.
 
@@ -33,7 +35,7 @@ toc: true
 
 나는 그나마 과일 중에 딸기를 좋아해서 딸기 아이콘으로 만들었다.
 
-# 2. 파비콘(favicon) 생성
+## 2. 파비콘(favicon) 생성
 
 [real favicon generator](https://realfavicongenerator.net/)에 들어가 `Select your Favicon image`를 클릭 후 이전에 골라놨던 파비콘 이미지를 클릭한다.
 
@@ -43,7 +45,7 @@ toc: true
 
 ![image](https://github.com/hobbyscripterII/csharp/assets/135996109/8a210467-d5e3-41ed-98fc-41f4a63f28bd)
 
-# 3. 파비콘(favicon) 불필요 파일 삭제
+## 3. 파비콘(favicon) 불필요 파일 삭제
 
 ![image](https://github.com/hobbyscripterII/csharp/assets/135996109/4ba82a32-4b0b-4cc1-b6bd-71326337db89)
 
@@ -54,7 +56,7 @@ toc: true
 - browserconfig.xml
 - site.webmanifest
 
-# 4. github blog 파비콘(favicon) 세팅
+## 4. github blog 파비콘(favicon) 세팅
 
 ![image](https://github.com/hobbyscripterII/csharp/assets/135996109/e8c4f20e-dfba-4a34-af64-f0cc5323aefa)
 
@@ -77,5 +79,5 @@ toc: true
 ![image](https://github.com/hobbyscripterII/csharp/assets/135996109/38ba6129-24da-4d65-a731-6d7d24e1c4d7)
 
 ---
-**참고 레퍼런스**
+**참고 레퍼런스** <br>
 [블로그 커스터마이징하기](https://wlqmffl0102.github.io/posts/Customizing-Blogs/)

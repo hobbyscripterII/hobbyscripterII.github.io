@@ -6,11 +6,13 @@ writer: 이주영
 categories: github blog
 tags: [github blog, jekyll, github, git, markdown]
 toc: true
-# toc_sticky: true
+toc_sticky: true
 ---
+# 나만의 github blog 만들기(windows)
+
 > 깃허브 블로그는 진입장벽이 높다고 들어서 엄두를 못냈었는데 이번 기회에 만들어보았다. 만드는 과정에서 일어난 여러 트러블 슈팅 또한 기록해두었다.
 
-# 1. ruby 설치
+## 1. ruby 설치
 ![스크린샷 2024-03-20 114139](https://github.com/hobbyscripterII/about-play/assets/135996109/fb4defe5-a360-42ec-829d-7921111c240a)
 
 [ruby download link](https://rubyinstaller.org/downloads/)
@@ -30,7 +32,7 @@ $ ruby -v
 ruby 3.2.3
 ```
 
-# 2. jekyll 설치
+## 2. jekyll 설치
 jekyll은 ruby가 설치되어 있다면 쉽게 설치가 가능하다.
 
 아래와 같이 cmd 창에서 jekyll 설치 명령어를 입력해보자.
@@ -47,7 +49,7 @@ $ jekyll -v
 jekyll 4.3.3
 ```
 
-# 3. repository 생성
+## 3. repository 생성
 ![스크린샷 2024-03-20 115008](https://github.com/hobbyscripterII/about-play/assets/135996109/dd8c9faa-42c8-4597-871f-6f835c9e43f2)
 
 <br>
@@ -56,7 +58,7 @@ jekyll 4.3.3
 
 레파지토리의 이름은 `{github_username}.github.io`로 지정한다.
 
-# 4. repository clone
+## 4. repository clone
 이제 내 컴퓨터에서 위에서 만든 레파지토리를 클론해야한다.
 
 내가 원하는 디렉토리 내에서 터미널을 열거나 cmd창에서 `cd` 명령어로 클론받을 디렉토리에 이동하자.
@@ -67,7 +69,7 @@ jekyll 4.3.3
 $ git clone https://github.com/{github_username}/{github_username}.github.io
 ```
 
-# 5. jekyll 사이트 생성
+## 5. jekyll 사이트 생성
 4번에서 실행한 명령어를 통해 내가 원하는 디렉토리에 clone된 github repository를 확인할 수 있을 것이다.
 
 이제 여기다가 jekyll 사이트를 생성해보자.
@@ -108,7 +110,7 @@ Server running... press ctrl-c to stop.
 
 같이 적용하면서 살펴보자!
 
-# 6. jekyll 'Chirpy' 테마 다운로드
+## 6. jekyll 'Chirpy' 테마 다운로드
 > 처음 jekyll 사이트를 생성하면 아무것도 없는 빈 사이트만 노출된다. 따라서 우리는 원하는 테마를 적용하기 위해 아래 링크에서 테마를 다운받도록 한다.
 > 
 > 나는 Chirpy 테마를 적용했으므로 Chirpy 테마 적용을 기준으로 작성한다.(다른 테마는 적용 방식이 조금씩 다른 것 같았다. 다른 테마를 적용하고 싶다면 다른 포스팅을 확인하는 것이 좋을 것이다)
@@ -131,7 +133,7 @@ http://jekyllthemes.org 에서 Chirpy 테마를 다운로드하고 압축을 푼
 $ bundle install
 ```
 
-# 7. 블로그 설정 변경
+## 7. 블로그 설정 변경
 이제 테마를 적용했으니 블로그를 설정해보자.
 레파지토리의 루트 경로에 있는 `_config.yml`을 실행한다.
 
@@ -161,7 +163,7 @@ $ bundle exec jekyll serve
 
 위와같이 화면에 나타나면 깃허브 블로그 만들기 2/3은 성공이다.
 
-#### ⛔ 블로그 내에서 페이지 전환 시 계속 나타나는 'assert/js/dist/*.min.js Not Found'
+### ⛔ 블로그 내에서 페이지 전환 시 계속 나타나는 'assert/js/dist/*.min.js Not Found'
 
 화면에 jekyll 테마가 잘 적용되었다.
 
@@ -186,7 +188,7 @@ $ npm run build
 ```
 이후 형광색으로 `created assets/js/dist/*.min.js`가 로그에 여러 줄 뜨는 것을 확인했다면 해당 에러가 더 이상 발생하지 않을 것이다.
 
-# 8. 테스트 포스팅 작성
+## 8. 테스트 포스팅 작성
 로컬 레파지토리 메인 루트에 `_posts` 디렉토리를 생성한다.
 
 ```shell
@@ -251,7 +253,7 @@ tag는 배열 형태로 입력받으며 `tags: [github blog, jekyll, github, git
 $ bundle exec jekyll serve
 ```
 
-#### ⛔ 메인 페이지 포스팅 미출력
+### ⛔ 메인 페이지 포스팅 미출력
 category나 tags 페이지를 통해 포스팅이 정상적으로 등록되었다는 것을 확인했지만 메인 페이지에서 포스팅이 미출력되는 이슈가 있었다.
 
 참고하면서 만든 블로그에서 미리 발생했던 에러라 간단하게만 적자면 `path:\{github_username}.github.io\_layouts`의 home.html에서 아래와 같이 소스코드를 수정해주면 된다.
@@ -261,7 +263,7 @@ category나 tags 페이지를 통해 포스팅이 정상적으로 등록되었�
 for post in posts를 for post in site.posts로 변경한다.
 
 
-# github action에 build 및 배포
+## 9. github action에 build 및 배포
 
 ![스크린샷 2024-03-20 134922](https://github.com/hobbyscripterII/about-play/assets/135996109/df6d5ac1-f6c8-4783-9b64-f2f03a75b9d4)
 
@@ -286,7 +288,7 @@ cmd 창에서 push를 진행할 경우 아래와 같이 빌드 과정을 확인�
 
 끝!
 
-#### ⛔ Process completed with exit code.
+### ⛔ Process completed with exit code.
 
 ![image](https://github.com/hobbyscripterII/about-play/assets/135996109/42d97de0-f48c-4cab-83d4-dae7cdf4f6b7)
 

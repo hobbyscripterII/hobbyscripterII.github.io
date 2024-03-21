@@ -8,9 +8,13 @@ tags: [github blog, jekyll, github, git, favicon, issue]
 toc: true
 # toc_sticky: true
 ---
+# http is not an HTTPS link(Process completed with exit code 1)
+
 깃허브 블로그 만든지도 얼마 안됐는데 벌써 트러블슈팅 블로깅 할 게 하나 생겼다!
 
 이슈 내용은 github blog(jekyll)를 github action으로 build 시 `Process completed with exit code 1.` 에러가 발생하는 것이였다.
+
+## 1. 로그 확인
 
 자세한 로그는 아래와 같다.
 
@@ -51,7 +55,7 @@ toc: true
 
 그렇게 바보짓을 반복하다가 로그 창을 다시 읽어봤다.
 
-<br>
+## 2. 이슈 해결
 
 `http://jekyllthemes.org is not an HTTPS link`
 
@@ -74,7 +78,7 @@ toc: true
 
 ![image](https://github.com/hobbyscripterII/about-play/assets/135996109/3a7f2920-fbd8-44aa-8d1a-1c783aa03324)
 
-# HTML Proofer는 왜 Http 링크를 잡아낸걸까?
+## 3. HTML Proofer는 왜 Http 링크를 잡아낸걸까?
 `http://jekyllthemes.org`가 https 링크가 아니라는 에러가 왜 발생한걸까 생각해보니 빌드 시 HTML Proofer가 해당 에러를 잡아냈다.
 
 `HTML Proofer`는 jekyll에서 제공하는 테스트로 `생성된 사이트의 모든 링크와 이미지가 존재하는지 확인`해주는 `테스트 스크립트`라고 한다.

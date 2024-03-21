@@ -8,6 +8,8 @@ tags: [github blog, profile, github]
 toc: true
 # toc_sticky: true
 ---
+# github profile에 blog post 자동 업데이트하기
+
 github blog는 나중에 하면서 조금씩 더 꾸미기로하고 이번에는 github profile에 블로그 포스팅 목록을 내림차순으로 보여주는 방법이 있다고 해서 적용해봤다!
 
 ![image](https://i.pinimg.com/564x/48/85/6d/48856d1e68fd5daa19315451f571dd2c.jpg){: width="50%"}
@@ -19,7 +21,7 @@ go go..
 <br>
 <br>
 
-# 1. github profile `README.md` 수정
+## 1. github profile `README.md` 수정
 일단 먼저 github profile의 README.md를 수정해줘야 한다.
 
 ```md
@@ -29,7 +31,7 @@ go go..
 
 틀리면 안되니까 복붙하자.
 
-# 2. workflow yml 생성
+## 2. workflow yml 생성
 github profile 레파지토리에 들어간다.
 
 'Add file - Create new file'을 누른다.
@@ -64,13 +66,15 @@ jobs:
 
 ![스크린샷 2024-03-20 230942](https://github.com/hobbyscripterII/csharp/assets/135996109/461b2f52-f90b-48a3-9c33-ca82e1fcc01c)
 
-# 3. run workflow
+## 3. run workflow
 
 ![스크린샷 2024-03-20 224948](https://github.com/hobbyscripterII/csharp/assets/135996109/25731317-0e6f-4b8f-942c-1238ba7637ac)
 
 마지막이다!
 
 actions - Latest blog post workflow - Run workflow - Run workflow를 차례대로 눌러주면 끝이다.
+
+## 4. 완성
 
 ![image](https://github.com/hobbyscripterII/hobbyscripterII/assets/135996109/cc4f5951-048c-40a5-8959-86563d0040b9)
 
