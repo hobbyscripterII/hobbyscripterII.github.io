@@ -288,7 +288,7 @@ cmd 창에서 push를 진행할 경우 아래와 같이 빌드 과정을 확인�
 
 끝!
 
-### ⛔ Process completed with exit code.
+### ⛔ internal script reference /assets/js/dist/commons.min.js does not exist.
 
 ![image](https://github.com/hobbyscripterII/about-play/assets/135996109/42d97de0-f48c-4cab-83d4-dae7cdf4f6b7)
 
