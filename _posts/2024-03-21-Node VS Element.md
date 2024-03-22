@@ -8,8 +8,6 @@ tags: [javascript node element]
 toc: true
 toc_sticky: true
 ---
-
-# Node VS Element
 혼자서 ssr 방식으로 프로젝트를 진행하다보니 html에서 동적 폼을 생성하거나 특정 요소를 수정, 삭제하는 등의 작업이 필요했다.
 
 그 과정에서 프론트 개념이 너무 부족하다는 것을 깨닫고 강의를 듣던 중 node와 element 단어가 반복적으로 언급되길래 둘의 차이점이 알고 싶었다.

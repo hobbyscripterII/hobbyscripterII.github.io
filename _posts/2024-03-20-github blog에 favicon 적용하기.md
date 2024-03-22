@@ -8,8 +8,6 @@ tags: [github blog, jekyll, github, git, favicon]
 toc: true
 # toc_sticky: true
 ---
-# github blog에 favicon 적용하기
-
 이전에 jekyll을 통해 github blog를 만들었다.
 이후 내 블로그를 구경하고 있던 찰나 상단에 이 아이콘이 거슬리기 시작했다.
 

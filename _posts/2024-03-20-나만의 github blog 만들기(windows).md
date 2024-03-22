@@ -8,8 +8,6 @@ tags: [github blog, jekyll, github, git, markdown]
 toc: true
 toc_sticky: true
 ---
-# 나만의 github blog 만들기(windows)
-
 > 깃허브 블로그는 진입장벽이 높다고 들어서 엄두를 못냈었는데 이번 기회에 만들어보았다. 만드는 과정에서 일어난 여러 트러블 슈팅 또한 기록해두었다.
 
 ## 1. ruby 설치

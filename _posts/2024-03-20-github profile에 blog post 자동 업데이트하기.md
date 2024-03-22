@@ -8,8 +8,6 @@ tags: [github blog, profile, github]
 toc: true
 # toc_sticky: true
 ---
-# github profile에 blog post 자동 업데이트하기
-
 github blog는 나중에 하면서 조금씩 더 꾸미기로하고 이번에는 github profile에 블로그 포스팅 목록을 내림차순으로 보여주는 방법이 있다고 해서 적용해봤다!
 
 ![image](https://i.pinimg.com/564x/48/85/6d/48856d1e68fd5daa19315451f571dd2c.jpg){: width="50%"}

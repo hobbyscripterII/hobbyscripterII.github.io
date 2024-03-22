@@ -8,8 +8,6 @@ tags: [github blog, jekyll, github, git, favicon, issue]
 toc: true
 # toc_sticky: true
 ---
-# http is not an HTTPS link(Process completed with exit code 1)
-
 깃허브 블로그 만든지도 얼마 안됐는데 벌써 트러블슈팅 블로깅 할 게 하나 생겼다!
 
 이슈 내용은 github blog(jekyll)를 github action으로 build 시 `Process completed with exit code 1.` 에러가 발생하는 것이였다.
