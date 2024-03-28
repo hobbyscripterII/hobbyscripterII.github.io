@@ -18,6 +18,8 @@ toc_sticky: true
 
 그리고 onclick 보다는 addEventListener를 지향하기 위해 노력했다.
 
+결과물은 [해당 링크](https://hobbyscripterii.github.io/to-do-list.io/){:target="_blank"}를 통해 확인할 수 있다.
+
 ## 1. todolist div 생성
 
 ```html
