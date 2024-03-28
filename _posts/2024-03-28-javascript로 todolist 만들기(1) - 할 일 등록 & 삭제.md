@@ -1,5 +1,5 @@
 ---
-title: "javascript로 todolist 만들기"
+title: "javascript로 todolist 만들기(1) - 할 일 등록 & 삭제"
 excerpt: "javascript를 사용해 todolist를 만들어보자!"
 date: 2024-03-28 13:59:00 +09:00
 writer: 이주영
