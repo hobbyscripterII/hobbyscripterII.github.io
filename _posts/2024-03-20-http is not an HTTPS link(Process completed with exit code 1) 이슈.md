@@ -1,6 +1,5 @@
 ---
-title: "http is not an HTTPS link(Process completed with exit code 1)"
-excerpt: "github action build 시 발생한 code 1 이슈를 잡아보자!"
+title: "http is not an HTTPS link(Process completed with exit code 1) 이슈"
 date: 2024-03-20 21:20:00 +09:00
 writer: 이주영
 categories: github blog

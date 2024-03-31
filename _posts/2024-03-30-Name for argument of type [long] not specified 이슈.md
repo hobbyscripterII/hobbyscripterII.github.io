@@ -3,7 +3,7 @@ title: "Name for argument of type [long] not specified 이슈"
 date: 2024-03-30 22:54:00 +09:00
 writer: 이주영
 categories: spring
-tags: [spring, '@PathVariable']
+tags: [spring, issue, '@PathVariable']
 toc: true
 toc_sticky: true
 ---
@@ -41,7 +41,7 @@ Ensure that the compiler uses the '-parameters' flag.
 
 ```java
     @GetMapping("/read-playlist/{iboard}")
-    public String selPlaylistBoard(@RequestParam(name = "code") int code, @PathVariable long iboard, Model model) {
+    public String selPlaylistBoard(@RequestParam(name = "code") int code, @PathVariable(name = "iboard") long iboard, Model model) {
         getTitle(code, model);
         model.addAttribute("board", boardService.selPlaylistBoard(iboard));
         return "/board/read-playlist";

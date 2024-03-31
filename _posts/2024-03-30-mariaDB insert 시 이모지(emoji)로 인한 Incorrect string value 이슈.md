@@ -3,7 +3,7 @@ title: "mariaDB insert 시 이모지(emoji)로 인한 Incorrect string value 이
 date: 2024-03-30 14:20:00 +09:00
 writer: 이주영
 categories: sql
-tags: [sql, mysql, mariadb]
+tags: [sql, mysql, mariadb, issue]
 toc: true
 toc_sticky: true
 ---
