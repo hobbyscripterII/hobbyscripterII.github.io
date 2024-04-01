@@ -2,8 +2,8 @@
 title: "javascript event listener 호출 시 이전 event 중복 호출 이슈"
 date: 2024-04-01 22:43:00 +09:00
 writer: 이주영
-categories: sql
-tags: [javascript, event listener]
+categories: javascript
+tags: [javascript, event listener, issue]
 toc: true
 toc_sticky: true
 ---
