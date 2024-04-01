@@ -7,9 +7,11 @@ tags: [spring, issue, '@PathVariable', JPA, JPQL]
 toc: true
 toc_sticky: true
 ---
+해당 포스팅은 IntelliJ IDEA에서 build 시 build 환경이 다를 경우 발생할 수 있는 이슈들을 모은 `IntelliJ IDEA로 build 시 관련 이슈` 모음 포스팅이다!
+
 ![image](https://github.com/hobbyscripterII/about-play/assets/135996109/ecdf976c-acb8-497d-9510-979727e5501b){: width="50%" .normal}
 
-build 환경이 다를 경우 발생할 수 있는 이슈를 2개 발견하고 작성하는 IntelliJ IDEA로 build 시 관련 이슈 모음 포스팅이다!
+이슈 발생 원인은 원룸에서 작성한 코드들이 원룸에선 문제없이 돌아갔는데 본가와서 아래의 에러들이 발생했다. 더군다나 소스코드 수정이 없이 발생했기에 추후 같은 이슈가 발생했을 때 찾아볼 수 있도록 작성했다.
 
 ## 1. Name for argument of type [long] not specified 이슈
 
@@ -35,7 +37,11 @@ Ensure that the compiler uses the '-parameters' flag.
 
 ![화면 캡처 2024-03-30 224734](https://github.com/hobbyscripterII/about-play/assets/135996109/291d2d9c-8f67-4283-b495-e5e8bb10359c)
 
-내 본가 컴퓨터에선 빌드 시 IntelliJ IDEA가 빌드하도록 되어 있었는데 아마 원룸에선 gradle로 빌드하게 끔 되어 있었던 것 같다.(소스코드 건드리기 전에 발생한 에러라 다른 점은 딱히 못찾겠다. 만약에 원룸가서 다시 찾는다면 수정하겠다!)
+내 본가 컴퓨터에선 빌드 시 IntelliJ IDEA가 빌드하도록 되어 있었는데 아마 원룸에선 gradle로 빌드하게 끔 되어 있었던 것 같다.~~(소스코드 건드리기 전에 발생한 에러라 다른 점은 딱히 못찾겠다. 만약에 원룸가서 다시 찾는다면 수정하겠다!)~~
+
+> 이후 원룸에서 `build and run using`을 확인해보았다.
+> ![스크린샷 2024-04-01 221743](https://github.com/hobbyscripterII/about-play/assets/135996109/07c080c1-b35d-4049-ab89-78df95a04f6e)
+> **이로써 빌드 환경이 IntelliJ IDEA 일 때 발생하는 에러임을 다시 한번 확인할 수 있었다.**
 
 이 쯤 되면 **빌드할 때 gradle로 잡는거랑 IntelliJ IDEA로 잡는거랑 뭐가 다른가** 싶을 것이다.
 
