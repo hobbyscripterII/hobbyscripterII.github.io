@@ -2,8 +2,8 @@
 title: "IntelliJ IDEA로 build 시 관련 이슈들"
 date: 2024-03-30 22:54:00 +09:00
 writer: 이주영
-categories: spring
-tags: [spring, issue, '@PathVariable', JPA, JPQL]
+categories: springboot
+tags: [spring boot, issue, '@PathVariable', JPA, JPQL]
 toc: true
 toc_sticky: true
 ---
