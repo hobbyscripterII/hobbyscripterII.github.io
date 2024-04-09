@@ -124,6 +124,19 @@ public class NaverMapApiController {
 참고로 `요청 url`과 `요청 header명`은 [여기](https://api.ncloud-docs.com/docs/ai-naver-mapsgeocoding){: target="_blank"}서 자세히 확인할 수 있다.
 
 ## 4. html 작성
+html 코드 작성 전에 naver api를 사용하기 위해 다음과 같이 추가한다.
+
+```html
+<script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID"></script>
+<script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID&submodules=geocoder"></script>
+```
+
+파라미터에 있는 ncpClientId는 위에서 만들었던 애플리케이션 정보에 있는 client id이다.
+
+이후 알아서 코드를 작성한다.
+
+<br>
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -133,8 +146,8 @@ public class NaverMapApiController {
     <link href="/common.css" rel="stylesheet">
     <script src="/common.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=0jcn2x4ikv"></script>
-    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=0jcn2x4ikv&submodules=geocoder"></script>
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID"></script>
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID&submodules=geocoder"></script>
 </head>
 
 <body>
@@ -163,11 +176,16 @@ public class NaverMapApiController {
 </body>
 </html>
 ```
+
 아직 프론트 작업을 안해서 간단하게 만들었다.
 
 css는 알아서 먹이자.
 
+ajax도 알아서 살펴보자.
+
 적용하면 아래와 같이 화면에 나타난다.
+
+<br>
 
 ![image](https://github.com/hobbyscripterII/repeat-restaurant/assets/135996109/26cb68c9-231f-4518-9a41-ea88d92b77fe)
 
@@ -179,6 +197,8 @@ css는 알아서 먹이자.
 3. intelliJ IDEA의 콘솔 창 및 html F12의 콘솔 창에 좌표를 확인한다.
 
 위의 로직을 순서대로 실행했을 때 아래와 같이 정상적으로 api가 호출되는 것을 확인할 수 있다!
+
+<br>
 
 ![image](https://github.com/hobbyscripterII/repeat-restaurant/assets/135996109/18fc9d41-a285-47b7-ab7c-b55fc9f9d287)
 
