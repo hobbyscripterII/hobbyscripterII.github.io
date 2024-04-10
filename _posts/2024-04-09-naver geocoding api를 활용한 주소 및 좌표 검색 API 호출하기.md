@@ -1,5 +1,5 @@
 ---
-title: "naver geocoding을 활용한 주소 및 좌표 검색 API 호출하기"
+title: "naver geocoding api를 활용한 주소 및 좌표 검색 API 호출하기"
 date: 2024-04-09 23:06:00 +09:00
 writer: 이주영
 categories: api naver

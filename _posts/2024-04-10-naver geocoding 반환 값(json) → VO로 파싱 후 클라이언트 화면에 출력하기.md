@@ -1,5 +1,5 @@
 ---
-title: "naver geocoding 반환 값(json) VO로 파싱 후 클라이언트 화면에 출력하기"
+title: "naver geocoding 반환 값(json) → VO로 파싱 후 클라이언트 화면에 출력하기"
 date: 2024-04-10 11:30:00 +09:00
 writer: 이주영
 categories: api naver
@@ -7,9 +7,9 @@ tags: [java, spring boot, json, VO]
 toc: true
 toc_sticky: true
 ---
-이전 포스팅 [naver geocoding을 활용한 주소 및 좌표 검색 API 호출하기](https://hobbyscripterii.github.io/posts/naver-geocoding%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%A3%BC%EC%86%8C-%EB%B0%8F-%EC%A2%8C%ED%91%9C-%EA%B2%80%EC%83%89-API-%ED%98%B8%EC%B6%9C%ED%95%98%EA%B8%B0/){: target="_blank"}에서는 input 폼에 주소를 입력 후 '좌표 얻기' 버튼을 클릭할 경우 ajax를 통해 geocoding api를 호출하는 url로 이동하여 해당 주소의 도로명 주소와 좌표 등의 상세 정보를 얻어내었다.
+이전 포스팅 [naver geocoding을 활용한 주소 및 좌표 검색 API 호출하기](https://hobbyscripterii.github.io/posts/naver-geocoding%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%A3%BC%EC%86%8C-%EB%B0%8F-%EC%A2%8C%ED%91%9C-%EA%B2%80%EC%83%89-API-%ED%98%B8%EC%B6%9C%ED%95%98%EA%B8%B0/){: target="_blank"}에서는 input 폼에 주소 입력 후 '좌표 얻기' 버튼을 클릭했을 때 ajax를 통해 geocoding api를 호출하는 url로 이동하여 해당 주소의 도로명 주소와 좌표 등의 상세 정보를 얻어내었다.
 
-이후 다시 ajax의 반환 값으로 json의 모든 정보들을 보냈으나 필요한 데이터만 보내고싶어서 json 데이터를 DTO에 담는 과정을 거쳤으며 해당 과정에 대한 포스팅이다.
+이후 다시 ajax의 반환 값으로 json의 모든 정보들을 클라이언트에 보냈으나 필요한 데이터만 보내고싶어서 json 데이터를 DTO에 담는 과정을 거쳤으며 해당 과정에 대한 포스팅이다.
 
 ## 1. DTO 작성
 dto를 작성하기 전에 json 데이터가 어떻게 넘어오는지 확인해보자.
