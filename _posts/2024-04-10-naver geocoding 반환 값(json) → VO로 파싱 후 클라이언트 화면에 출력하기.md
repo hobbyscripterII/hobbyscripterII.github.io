@@ -9,10 +9,10 @@ toc_sticky: true
 ---
 이전 포스팅 [naver geocoding을 활용한 주소 및 좌표 검색 API 호출하기](https://hobbyscripterii.github.io/posts/naver-geocoding%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%A3%BC%EC%86%8C-%EB%B0%8F-%EC%A2%8C%ED%91%9C-%EA%B2%80%EC%83%89-API-%ED%98%B8%EC%B6%9C%ED%95%98%EA%B8%B0/){: target="_blank"}에서는 input 폼에 주소 입력 후 '좌표 얻기' 버튼을 클릭했을 때 ajax를 통해 geocoding api를 호출하는 url로 이동하여 해당 주소의 도로명 주소와 좌표 등의 상세 정보를 얻어내었다.
 
-이후 다시 ajax의 반환 값으로 json의 모든 정보들을 클라이언트에 보냈으나 필요한 데이터만 보내고싶어서 json 데이터를 DTO에 담는 과정을 거쳤으며 해당 과정에 대한 포스팅이다.
+이후 다시 ajax의 반환 값으로 json의 모든 정보들을 클라이언트에 보냈으나 필요한 데이터만 보내고싶어서 json 데이터를 VO에 담는 과정을 거쳤으며 해당 과정에 대한 포스팅이다.
 
-## 1. DTO 작성
-dto를 작성하기 전에 json 데이터가 어떻게 넘어오는지 확인해보자.
+## 1. VO 작성
+VO를 작성하기 전에 json 데이터가 어떻게 넘어오는지 확인해보자.
 
 일단 내가 갖고싶은 데이터는 도로명 주소, 지번 주소, 좌표다.
 
@@ -120,16 +120,16 @@ dto를 작성하기 전에 json 데이터가 어떻게 넘어오는지 확인해
 }
 ```
 
-json 타입의 데이터를 DTO로 담을 때 주의할 점은 데이터 타입이 다르면 파싱 과정에서 에러가 발생하기 때문에 어떤 형식으로 구성되어있는지만 확인하면 좋을 것 같다.
+json 타입의 데이터를 VO로 담을 때 주의할 점은 데이터 타입이 다르면 파싱 과정에서 에러가 발생하기 때문에 어떤 형식으로 구성되어있는지만 확인하면 좋을 것 같다.
 
 <br>
 
-내가 빼올 데이터를 DTO로 작성하면 아래와 같다.
+내가 빼올 데이터를 VO로 작성하면 아래와 같다.
 
 ```java
 @Data
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class NaverCoordinateGetDto {
+@JsonIgnoreProperties(ignoreUnknown = true) // json에 없는 프로퍼티 무시
+public class NaverCoordinateGetVo {
     private String status;
     private List<Addresses> addresses;
     private String errorMessage;
@@ -145,12 +145,12 @@ public class NaverCoordinateGetDto {
 }
 ```
 
-NaverCordinateGetDto는 json 데이터를 담을 dto이며 Addresses 클래스는 json에서 도로명 주소, 지번 주소, 좌표 값을 담고있는 배열 형태의 데이터이다. 따라서 해당 클래스를 list 형태로 담아 dto에 넣어뒀다. 멤버변수명은 json에 있는 프로퍼티명과 같아야하기 때문에 동일하게 적용시켰다.
+NaverCoordinateGetVo는 json 데이터를 담을 클래스이며 Addresses 클래스는 json에서 도로명 주소, 지번 주소, 좌표 값을 담고있는 배열 형태의 데이터이다. 따라서 해당 클래스를 list 형태로 담아 dto에 넣어뒀다. 멤버변수명은 json에 있는 프로퍼티명과 같아야하기 때문에 동일하게 적용시켰다.
 
-> **@JsonIgnoreProperties(ignoreUnknown = true)** - json에서 dto로 파싱할 때 없는 프로퍼티는 무시한다.(에러가 발생하지 않는다)
+> **@JsonIgnoreProperties(ignoreUnknown = true)** - json 데이터를 java 객체에 파싱할 때 없는 프로퍼티는 무시한다.(에러가 발생하지 않는다)
 
 ## 2. controller 수정
-StringBuilder를 닫기 전 json을 DTO로 파싱하는 소스코드를 추가했다.
+StringBuilder를 닫기 전 json을 VO로 파싱하는 소스코드를 추가했다.
 
 ```java
 @Slf4j
@@ -211,12 +211,12 @@ public class NaverApiController {
 이전 포스팅에 있던 소스코드와 다른 점은 아래 부분이 추가되었으며 반환 타입이 수정되었다.
 
 ```java
-// json to dto 작업
+// json to VO 작업
 ObjectMapper objectMapper = new ObjectMapper(); // json을 java 객체로 변환하기 위해 ObjectMapper 객체 생성
 naverCoordinateGetVo = objectMapper.readValue(stringBuilder.toString(), NaverCoordinateGetVo.class);
 ```
 
-json 데이터를 java 객체로 변환하기 위해 ObjectMapper 객체를 생성했으며 담을 dto에 ObjectMapper 참조변수를 통해 파싱 과정을 거쳤다.
+json 데이터를 java 객체로 변환하기 위해 ObjectMapper 객체를 생성했으며 담을 VO에 ObjectMapper 참조변수를 통해 파싱 과정을 거쳤다.
 
 ObjectMapper에서 제공하는 readValue는 json 데이터를 java 객체로 역직렬화해주는 기능을 갖고있다.
 
