@@ -2,7 +2,7 @@
 title: "naver geocoding을 활용한 주소 및 좌표 검색 API 호출하기"
 date: 2024-04-09 23:06:00 +09:00
 writer: 이주영
-categories: api
+categories: api naver
 tags: [java, spring boot, naver, api, maps, geocode]
 toc: true
 toc_sticky: true
@@ -203,98 +203,97 @@ ajax도 알아서 살펴보자.
 ![image](https://github.com/hobbyscripterII/repeat-restaurant/assets/135996109/18fc9d41-a285-47b7-ab7c-b55fc9f9d287)
 
 ```json
-{
-    "status": "OK",
-    "meta": {
+  "status": "OK",
+  "meta": {
     "totalCount": 1,
     "page": 1,
     "count": 1
-    },
-    "addresses": [
+  },
+  "addresses": [
     {
-        "roadAddress": "대구광역시 중구 중앙대로 412 아카데미극장",
-        "jibunAddress": "대구광역시 중구 남일동 65-1 아카데미극장",
-        "englishAddress": "412, Jungang-daero, Jung-gu, Daegu, Republic of Korea",
-        "addressElements": [
+      "roadAddress": "대구광역시 중구 중앙대로 412 아카데미극장",
+      "jibunAddress": "대구광역시 중구 남일동 65-1 아카데미극장",
+      "englishAddress": "412, Jungang-daero, Jung-gu, Daegu, Republic of Korea",
+      "addressElements": [
         {
-        "types": [
-        "SIDO"
-        ],
-        "longName": "대구광역시",
-        "shortName": "대구광역시",
-        "code": ""
+          "types": [
+            "SIDO"
+          ],
+          "longName": "대구광역시",
+          "shortName": "대구광역시",
+          "code": ""
         },
         {
-        "types": [
-        "SIGUGUN"
-        ],
-        "longName": "중구",
-        "shortName": "중구",
-        "code": ""
+          "types": [
+            "SIGUGUN"
+          ],
+          "longName": "중구",
+          "shortName": "중구",
+          "code": ""
         },
         {
-        "types": [
-        "DONGMYUN"
-        ],
-        "longName": "남일동",
-        "shortName": "남일동",
-        "code": ""
+          "types": [
+            "DONGMYUN"
+          ],
+          "longName": "남일동",
+          "shortName": "남일동",
+          "code": ""
         },
         {
-        "types": [
-        "RI"
-        ],
-        "longName": "",
-        "shortName": "",
-        "code": ""
+          "types": [
+            "RI"
+          ],
+          "longName": "",
+          "shortName": "",
+          "code": ""
         },
         {
-        "types": [
-        "ROAD_NAME"
-        ],
-        "longName": "중앙대로",
-        "shortName": "중앙대로",
-        "code": ""
+          "types": [
+            "ROAD_NAME"
+          ],
+          "longName": "중앙대로",
+          "shortName": "중앙대로",
+          "code": ""
         },
         {
-        "types": [
-        "BUILDING_NUMBER"
-        ],
-        "longName": "412",
-        "shortName": "412",
-        "code": ""
+          "types": [
+            "BUILDING_NUMBER"
+          ],
+          "longName": "412",
+          "shortName": "412",
+          "code": ""
         },
         {
-        "types": [
-        "BUILDING_NAME"
-        ],
-        "longName": "아카데미극장",
-        "shortName": "아카데미극장",
-        "code": ""
+          "types": [
+            "BUILDING_NAME"
+          ],
+          "longName": "아카데미극장",
+          "shortName": "아카데미극장",
+          "code": ""
         },
         {
-        "types": [
-        "LAND_NUMBER"
-        ],
-        "longName": "65-1",
-        "shortName": "65-1",
-        "code": ""
+          "types": [
+            "LAND_NUMBER"
+          ],
+          "longName": "65-1",
+          "shortName": "65-1",
+          "code": ""
         },
         {
-        "types": [
-        "POSTAL_CODE"
-        ],
-        "longName": "41937",
-        "shortName": "41937",
-        "code": ""
+          "types": [
+            "POSTAL_CODE"
+          ],
+          "longName": "41937",
+          "shortName": "41937",
+          "code": ""
         }
-        ],
-        "x": "128.5942424",
-        "y": "35.8699358",
-        "distance": 0
-        }
-    ],
-    "errorMessage": ""
+      ],
+      "x": "128.5942424",
+      "y": "35.8699358",
+      "distance": 0.0
+    }
+  ],
+  "errorMessage": ""
 }
 ```
 
