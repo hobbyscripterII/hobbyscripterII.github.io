@@ -3,7 +3,7 @@ title: "naver geocoding 반환 값(json) → VO로 파싱 후 클라이언트 �
 date: 2024-04-10 11:30:00 +09:00
 writer: 이주영
 categories: api naver
-tags: [java, spring boot, json, VO]
+tags: [java, spring boot, json, VO, naver, maps, geocoding, api]
 toc: true
 toc_sticky: true
 ---
@@ -145,7 +145,7 @@ public class NaverCoordinateGetVo {
 }
 ```
 
-NaverCoordinateGetVo는 json 데이터를 담을 클래스이며 Addresses 클래스는 json에서 도로명 주소, 지번 주소, 좌표 값을 담고있는 배열 형태의 데이터이다. 따라서 해당 클래스를 list 형태로 담아 dto에 넣어뒀다. 멤버변수명은 json에 있는 프로퍼티명과 같아야하기 때문에 동일하게 적용시켰다.
+NaverCoordinateGetVo는 json 데이터를 담을 클래스이며 Addresses 클래스는 json에서 도로명 주소, 지번 주소, 좌표 값을 담고있는 배열 형태의 데이터이다. 따라서 해당 클래스를 list 형태로 담아 VO에 넣어뒀다. 멤버변수명은 json에 있는 프로퍼티명과 같아야하기 때문에 동일하게 적용시켰다.
 
 > **@JsonIgnoreProperties(ignoreUnknown = true)** - json 데이터를 java 객체에 파싱할 때 없는 프로퍼티는 무시한다.(에러가 발생하지 않는다)
 

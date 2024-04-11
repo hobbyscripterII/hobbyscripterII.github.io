@@ -4,7 +4,7 @@ excerpt: "Node와 Element의 차이점을 알아보자!"
 date: 2024-03-21 16:00:00 +09:00
 writer: 이주영
 categories: javascript
-tags: [javascript node element]
+tags: [javascript, node, element]
 toc: true
 toc_sticky: true
 ---
